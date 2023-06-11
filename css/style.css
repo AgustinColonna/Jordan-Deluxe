@@ -177,6 +177,13 @@ header nav {
   margin-bottom: 50px; }
 
 /* FORMULARIO DE CONTACTO */
+.promociones {
+  font-size: 2,5em;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 .wrapper_contacto {
   display: flex;
   flex-direction: column;
