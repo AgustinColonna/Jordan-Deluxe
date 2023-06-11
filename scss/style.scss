@@ -78,12 +78,31 @@ header{
 /* MAIN INDEX */
 
 .slogan {
-    font-family: "Goldman", cursive;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 40px;
-    margin-bottom: 40px;
+	margin: auto;
+	display: table;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h1 { 
+        position: relative; 
+        float: left;
+        background: radial-gradient(circle at 0% 0%, #ffd600 0, #ffc700 10%, #ffb600 20%, #ffa304 30%, #ff9016 40%, #f37b1f 50%, #e56725 60%, #d7562a 70%, #cb462e 80%, #c03832 90%, #b62c37 100%);
+        color: black;
+        font-size: 2.5em;
+        span {
+            position:absolute;
+            right:0;
+            width:0;
+            background: #fdeedc;
+            border-left: 1px solid #000;
+            animation: escribir 3s steps(25) infinite alternate;           
+        }    
+    }
+    @keyframes escribir {
+        from { width: 100% }
+        to { width:0 }
+    }        
 }
+
 .productos {
     color: black;
     font-family: "Goldman", cursive;
@@ -134,22 +153,45 @@ header{
         font-size: 2,5em;
         color: black;
         text-align: center;
-        margin-top: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
-    .sobre_nosotros {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        gap: 20px;
-        padding: 20px 0;
-        p {
-            font-size: 1.2em;
-            margin-left: 10%;
-            margin-right: 10%;
-            justify-content: center;
-            margin-top: 25px;
-            text-align: justify;
-            
+    .row {
+        background-color: #9c9c9c;
+        box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.75);
+        margin: auto;
+        width: 80%;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+        @media (max-width: 768px){
+            margin: auto;
+            grid-template-columns: 1fr;
+        }
+        .izquierda{
+            overflow: hidden;
+            img{
+                border-radius: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .derecha{
+            display: flex;
+            align-items: center;
+            .parrafo{
+                padding-left: 20px;
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding-bottom: 15px;
+                    @media (max-width: 991px){
+                        padding-left: 0;
+                    }
+                }
+            }
         }
     }        
     .metodos_pago {
@@ -174,14 +216,14 @@ header{
         margin-top: 50px;
         margin-bottom: 50px;
     }
-}    
+}
 
 /* FORMULARIO DE CONTACTO */
 
 .wrapper_contacto {
-    display: flex;
+    display: block;
     flex-direction: column;
-    max-width: 70%;
+    max-width: 60%;
     margin: 4rem auto;
     background-image: radial-gradient(
       #f1a661 1.4500000000000002px,
@@ -192,10 +234,10 @@ header{
     text-align: center;
     padding: 2rem;
     .form {
-        display: flex;
+        display: block;
         flex-direction: column;
         div {
-            display: flex;
+            display: block;
             flex-direction: column;
             margin-bottom: 1.5rem;
             .enviar {

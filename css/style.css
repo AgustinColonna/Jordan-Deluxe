@@ -55,11 +55,29 @@ header nav {
 
 /* MAIN INDEX */
 .slogan {
-  font-family: "Goldman", cursive;
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 40px;
-  margin-bottom: 40px; }
+  margin: auto;
+  display: table;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .slogan h1 {
+    position: relative;
+    float: left;
+    background: radial-gradient(circle at 0% 0%, #ffd600 0, #ffc700 10%, #ffb600 20%, #ffa304 30%, #ff9016 40%, #f37b1f 50%, #e56725 60%, #d7562a 70%, #cb462e 80%, #c03832 90%, #b62c37 100%);
+    color: black;
+    font-size: 2.5em; }
+    .slogan h1 span {
+      position: absolute;
+      right: 0;
+      width: 0;
+      background: #fdeedc;
+      border-left: 1px solid #000;
+      animation: escribir 3s steps(25) infinite alternate; }
+
+@keyframes escribir {
+  from {
+    width: 100%; }
+  to {
+    width: 0; } }
 
 .productos {
   color: black;
@@ -102,21 +120,41 @@ header nav {
   font-size: 2,5em;
   color: black;
   text-align: center;
-  margin-top: 20px; }
+  margin-top: 30px;
+  margin-bottom: 30px; }
 
-.container-nosotros .sobre_nosotros {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  gap: 20px;
-  padding: 20px 0; }
-  .container-nosotros .sobre_nosotros p {
-    font-size: 1.2em;
-    margin-left: 10%;
-    margin-right: 10%;
-    justify-content: center;
-    margin-top: 25px;
-    text-align: justify; }
+.container-nosotros .row {
+  background-color: #9c9c9c;
+  box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.75);
+  margin: auto;
+  width: 80%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px 30px; }
+  @media (max-width: 768px) {
+    .container-nosotros .row {
+      margin: auto;
+      grid-template-columns: 1fr; } }
+  .container-nosotros .row .izquierda {
+    overflow: hidden; }
+    .container-nosotros .row .izquierda img {
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .container-nosotros .row .derecha {
+    display: flex;
+    align-items: center; }
+    .container-nosotros .row .derecha .parrafo {
+      padding-left: 20px; }
+      .container-nosotros .row .derecha .parrafo p {
+        font-size: 16px;
+        line-height: 26px;
+        padding-bottom: 15px; }
+        @media (max-width: 991px) {
+          .container-nosotros .row .derecha .parrafo p {
+            padding-left: 0; } }
 
 .container-nosotros .metodos_pago {
   display: flex;
@@ -142,7 +180,7 @@ header nav {
 .wrapper_contacto {
   display: flex;
   flex-direction: column;
-  max-width: 70%;
+  max-width: 60%;
   margin: 4rem auto;
   background-image: radial-gradient(#f1a661 1.45px, #e5e5f7 1.45px);
   background-size: 29px 29px;
@@ -235,13 +273,3 @@ header nav {
     font-size: 130%; }
     .wrapper_productos .content h2 h4 {
       text-align: center; }
-
-/* MEDIA QUERIES */
-@media screen and (max-width: 975px) {
-  .sobre_nosotros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto; }
-    .sobre_nosotros img {
-      margin: auto; } }
