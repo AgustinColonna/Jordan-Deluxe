@@ -180,21 +180,22 @@ header nav {
 .wrapper_contacto {
   display: flex;
   flex-direction: column;
-  max-width: 60%;
+  max-width: 50%;
   margin: 4rem auto;
   background-image: radial-gradient(#f1a661 1.45px, #e5e5f7 1.45px);
   background-size: 29px 29px;
   box-shadow: 10px 10px 27px -1px rgba(0, 0, 0, 0.75);
   text-align: center;
   padding: 2rem; }
-  .wrapper_contacto .form {
+  .wrapper_contacto form {
     display: flex;
-    flex-direction: column; }
-    .wrapper_contacto .form div {
+    flex-direction: column;
+    height: 100%; }
+    .wrapper_contacto form div {
       display: flex;
       flex-direction: column;
       margin-bottom: 1.5rem; }
-      .wrapper_contacto .form div .enviar {
+      .wrapper_contacto form div .enviar {
         width: 200px;
         margin: 0 auto; }
 
