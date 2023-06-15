@@ -1,0 +1,28 @@
+header{
+    nav {
+        background-color: $maincolor;
+        .mod-navbar {
+            ul {
+                justify-content: flex-end;
+                width: 100%;
+            }
+        }
+        div {
+            a {
+                .logo {
+                    width: 160px;
+                    object-fit: cover;
+                }
+            }  
+        }
+        .nav-link {
+            color: $blackcolor;
+            font-size: 20px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            &:hover {
+                background-color: $backcolor;
+            }
+        }
+    }
+}

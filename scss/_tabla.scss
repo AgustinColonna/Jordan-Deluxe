@@ -1,0 +1,22 @@
+.tabla {
+    margin: auto;
+    width: fit-content;
+    background-color: $withecolor;
+    width: 50%;
+    height: 300px;
+    line-height: 50px;
+    font-family: "Goldman", cursive;
+}    
+.container_tabla {
+    background-color: $backcolor;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.linea1 {
+    background-color: $maincolor;
+}
+.logozapatilla {
+    margin: auto;
+    width: fit-content;
+    margin-bottom: 30px;
+}

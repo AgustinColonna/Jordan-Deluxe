@@ -1,0 +1,69 @@
+.container-nosotros {
+    h1{
+        font-size: 2,5em;
+        color: $blackcolor;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .row {
+        background-color: #9c9c9c;
+        box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.75);
+        margin: auto;
+        width: 80%;
+        max-width: 1170px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px 30px;
+        @media (max-width: 768px){
+            margin: auto;
+            grid-template-columns: 1fr;
+        }
+        .izquierda{
+            overflow: hidden;
+            img{
+                border-radius: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .derecha{
+            display: flex;
+            align-items: center;
+            .parrafo{
+                padding-left: 20px;
+                p{
+                    font-size: 16px;
+                    line-height: 26px;
+                    padding-bottom: 15px;
+                    @media (max-width: 991px){
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }        
+    .metodos_pago {
+        display: flex;
+        justify-content: center;
+        height: 80px;
+        width: 100%;
+        gap: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        img {
+            background-color: #e5e5f7;
+            box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.75);
+            &:hover {
+                opacity: (.5);
+            }
+        }    
+    }    
+    .mapa{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}

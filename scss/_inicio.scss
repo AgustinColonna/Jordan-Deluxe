@@ -1,0 +1,49 @@
+.slogan {
+	margin: auto;
+	display: table;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    h1 { 
+        position: relative; 
+        float: left;
+        background: radial-gradient(circle at 0% 0%, #ffd600 0, #ffc700 10%, #ffb600 20%, #ffa304 30%, #ff9016 40%, #f37b1f 50%, #e56725 60%, #d7562a 70%, #cb462e 80%, #c03832 90%, #b62c37 100%);
+        color: $blackcolor;
+        font-size: 2.5em;
+        span {
+            position:absolute;
+            right:0;
+            width:0;
+            background: $backcolor;
+            border-left: 1px solid #000;
+            animation: escribir 3s steps(25) infinite alternate;           
+        }    
+    }
+    @keyframes escribir {
+        from { width: 100% }
+        to { width:0 }
+    }        
+}
+
+.carousel-inner{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.productos {
+    color: $blackcolor;
+    font-family: "Goldman", cursive;
+    font-size: 170%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.container_products {
+    h3{
+        text-align: center;
+        font-size: 130% ;
+    }
+}

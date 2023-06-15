@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box; }
-
-body {
-  background-color: #fdeedc;
-  font-family: "Goldman", cursive; }
-
-/* HEADER */
+/* colors */
 header nav {
   background-color: #f1a661; }
   header nav .mod-navbar ul {
@@ -26,34 +15,50 @@ header nav {
     header nav .nav-link:hover {
       background-color: #fdeedc; }
 
-/* CAROUSEL */
-.carousel-inner {
-  height: 100%;
+.footer {
+  background-color: black;
   width: 100%;
-  margin: auto;
-  object-fit: cover;
-  overflow: hidden; }
+  height: 150px;
+  padding: 20px 0;
+  text-align: center; }
+  .footer .redes-principal {
+    display: block;
+    text-align: center; }
+    .footer .redes-principal a {
+      display: inline-block;
+      min-height: 40px;
+      width: 40px;
+      background-color: #f1a661;
+      margin: 0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: white;
+      transition: all 0.5s ease; }
+      .footer .redes-principal a:hover {
+        color: #f1a661;
+        padding-left: 6px; }
+  .footer .titulo-redes {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #f1a661;
+    padding-bottom: 10px;
+    display: inline-block; }
+  .footer .redes-sociales {
+    background-color: black;
+    font-size: 18px;
+    text-decoration: none;
+    color: #f1a661;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease; }
+    .footer .redes-sociales .fab {
+      color: white; }
+      .footer .redes-sociales .fab:hover {
+        color: black; }
 
-/* ICONO WSP */
-.btn-wsp {
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  bottom: 30px;
-  right: 30px;
-  background-color: #f1a661;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-  z-index: 100; }
-  .btn-wsp .fab {
-    color: white; }
-    .btn-wsp .fab:hover {
-      color: black; }
-
-/* MAIN INDEX */
 .slogan {
   margin: auto;
   display: table;
@@ -79,6 +84,13 @@ header nav {
   to {
     width: 0; } }
 
+.carousel-inner {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
+  overflow: hidden; }
+
 .productos {
   color: black;
   font-family: "Goldman", cursive;
@@ -87,12 +99,40 @@ header nav {
   margin-top: 30px;
   margin-bottom: 30px; }
 
-/* PRODUCTOS INDEX */
 .container_products h3 {
   text-align: center;
   font-size: 130%; }
 
-/* TABLA DE TALLES */
+.wrapper_productos .titulo-productos {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 2,5em; }
+
+.wrapper_productos .container_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 26rem;
+  gap: 1rem;
+  margin: 2rem; }
+  .wrapper_productos .container_products div {
+    display: flex;
+    flex-direction: column; }
+    .wrapper_productos .container_products div img {
+      height: 350px;
+      object-fit: cover;
+      overflow: hidden; }
+
+.wrapper_productos .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem; }
+  .wrapper_productos .content h2 {
+    text-align: center;
+    font-size: 130%; }
+    .wrapper_productos .content h2 h4 {
+      text-align: center; }
+
 .tabla {
   margin: auto;
   width: fit-content;
@@ -115,7 +155,35 @@ header nav {
   width: fit-content;
   margin-bottom: 30px; }
 
-/* SOBRE NOSOTROS */
+.promociones {
+  font-size: 2,5em;
+  color: black;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+.wrapper_contacto {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: 4rem auto;
+  background-image: radial-gradient(#f1a661 1.45px, #e5e5f7 1.45px);
+  background-size: 29px 29px;
+  box-shadow: 10px 10px 27px -1px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  padding: 2rem; }
+  .wrapper_contacto form {
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+    .wrapper_contacto form div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1.5rem; }
+      .wrapper_contacto form div .enviar {
+        width: 200px;
+        margin: 0 auto; }
+
 .container-nosotros h1 {
   font-size: 2,5em;
   color: black;
@@ -176,108 +244,32 @@ header nav {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-/* FORMULARIO DE CONTACTO */
-.promociones {
-  font-size: 2,5em;
-  color: black;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #fdeedc;
+  font-family: "Goldman", cursive; }
+
+/* wsp button */
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f1a661;
+  border-radius: 50px;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px; }
-
-.wrapper_contacto {
-  display: flex;
-  flex-direction: column;
-  max-width: 50%;
-  margin: 4rem auto;
-  background-image: radial-gradient(#f1a661 1.45px, #e5e5f7 1.45px);
-  background-size: 29px 29px;
-  box-shadow: 10px 10px 27px -1px rgba(0, 0, 0, 0.75);
-  text-align: center;
-  padding: 2rem; }
-  .wrapper_contacto form {
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-    .wrapper_contacto form div {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 1.5rem; }
-      .wrapper_contacto form div .enviar {
-        width: 200px;
-        margin: 0 auto; }
-
-/* FOOTER */
-.footer {
-  background-color: black;
-  width: 100%;
-  height: 150px;
-  padding: 20px 0;
-  text-align: center; }
-  .footer .redes-principal {
-    display: block;
-    text-align: center; }
-    .footer .redes-principal a {
-      display: inline-block;
-      min-height: 40px;
-      width: 40px;
-      background-color: #f1a661;
-      margin: 0 10px 10px 0;
-      text-align: center;
-      line-height: 40px;
-      border-radius: 50%;
-      color: white;
-      transition: all 0.5s ease; }
-      .footer .redes-principal a:hover {
-        color: #f1a661;
-        padding-left: 6px; }
-  .footer .titulo-redes {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #f1a661;
-    padding-bottom: 10px;
-    display: inline-block; }
-  .footer .redes-sociales {
-    background-color: black;
-    font-size: 18px;
-    text-decoration: none;
-    color: #f1a661;
-    display: block;
-    margin-bottom: 15px;
-    transition: all 0.3s ease; }
-    .footer .redes-sociales .fab {
-      color: white; }
-      .footer .redes-sociales .fab:hover {
-        color: black; }
-
-/* SECCION DE PRODUCTOS */
-.wrapper_productos .titulo-productos {
-  text-align: center;
-  margin-top: 25px;
-  font-size: 2,5em; }
-
-.wrapper_productos .container_products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: 26rem;
-  gap: 1rem;
-  margin: 2rem; }
-  .wrapper_productos .container_products div {
-    display: flex;
-    flex-direction: column; }
-    .wrapper_productos .container_products div img {
-      height: 350px;
-      object-fit: cover;
-      overflow: hidden; }
-
-.wrapper_productos .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem; }
-  .wrapper_productos .content h2 {
-    text-align: center;
-    font-size: 130%; }
-    .wrapper_productos .content h2 h4 {
-      text-align: center; }
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100; }
+  .btn-wsp .fab {
+    color: white; }
+    .btn-wsp .fab:hover {
+      color: black; }

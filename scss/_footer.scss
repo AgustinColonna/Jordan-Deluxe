@@ -1,0 +1,51 @@
+.footer {
+    background-color: $blackcolor;
+    width: 100%;
+    height: 150px;
+    padding: 20px 0;
+    text-align: center;
+    .redes-principal {
+        display: block;
+        text-align: center;
+        a {
+            display: inline-block;
+            min-height: 40px;
+            width: 40px;
+            background-color: $maincolor;
+            margin: 0 10px 10px 0;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            color: $withecolor;
+            transition: all 0.5s ease;
+            &:hover {
+                color: $maincolor;
+                padding-left: 6px;
+            }
+        }
+    }        
+    .titulo-redes {
+        font-size: 20px;
+        color: $withecolor;
+        margin-bottom: 25px;
+        font-weight: 500;
+        border-bottom: 2px solid $maincolor;
+        padding-bottom: 10px;
+        display: inline-block;
+    }    
+    .redes-sociales {
+        background-color: $blackcolor;
+        font-size: 18px;
+        text-decoration: none;
+        color: $maincolor;
+        display: block;
+        margin-bottom: 15px;
+        transition: all 0.3s ease;
+        .fab{
+            color: $withecolor;
+            &:hover{
+                color: $blackcolor;
+            }
+        }
+    }
+}
